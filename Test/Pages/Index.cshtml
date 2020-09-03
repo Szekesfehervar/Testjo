@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <form method="post">
+        <h1>Jméno</h1>
+        <input asp-for="UserSubscription.Jmeno" class="form-control" />
+        <h1>Příjmení</h1>
+        <input asp-for="UserSubscription.Prijmeni" class="form-control" />
+        <p>tohle nefunguje sem nic nepiš :) změny vyhrazeny, třeba to příště bude lepší, má tam být ten věk, není, nevadí, příště</p>
+        <input asp-for="UserSubscription.Vek" class="form-control" />
+        <input type="submit" value="Submit Form" class="btn btn-primary" />
+    </form>
+
+    @if (Model.Users != null)
+    {
+        foreach (var user in Model.Users)
+        {
+            <p>Jméno a přijmení</p>
+            <p>@user.Jmeno
+            @user.Prijmeni</p>
+        }
+    }
+
+
+</div>
