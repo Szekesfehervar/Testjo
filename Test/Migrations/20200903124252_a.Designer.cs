@@ -9,8 +9,8 @@ using Test.Models;
 namespace Test.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200903122358_ah")]
-    partial class ah
+    [Migration("20200903124252_a")]
+    partial class a
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
